@@ -1,9 +1,12 @@
 #decimal to binary converter
 
 result = ''
-x = int(input("Enter decimal number you wnat to conver to binary"))
+num = int(input("Enter decimal number you want to convert to binary: "))
 
-if x == 0:
+if num == 0:
     result = '0'
+while num > 0:
+    result = str(num%2) + result
+    num = num // 2
 
-
+print(result)
